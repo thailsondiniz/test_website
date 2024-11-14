@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    /* align-items:center;
+    justify-content:center; */
+    min-height:100vh;
+    background-color:rgb(35, 24, 54);
+}
+
+header {
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  align-items: center;
+  height:80px;
+}
+
+img {
+  width: 1.2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Monospace;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  padding:0.5rem 0.8rem;
+  font-weight:500;
+}
+nav a:hover{
+    background:#333;
+    border-radius:0.1rem;
+    color:#fff;
+}
+.logo {
+  width: 5rem;
+  display: block;
+  font-weight: bold;
+  margin: 0;
+  object-fit: contain;
+  cursor:pointer;
+}
+
+
+.section-card{
+    width:100%;
+    height:110vh;
+    background-image: url("https://www.convrgencegame.com/static/backgroundFeatures-1a915bcb64865a0ad94ca2b8dda0ad67.jpg");
+    clip-path:polygon(0px 0px, 100% 0px, 100% calc(100% - 11.5vw), 89.2% calc(100% - 9.5vw), 90.5% calc(100% - 16.5vw), 0px calc(100% - 4vw));
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:start;
+    flex-direction:column;
+    padding:2rem 5rem;
+}
+
+section h2{
+    font-size:2.6rem;
+    font-family:arial;
+    text-transform:uppercase;
+    font-weight:800;
+    color:rgb(35, 24, 54);
+    margin-bottom:3rem;
+}
+.card{
+    background-color:rgb(35, 24, 54);
+    display:flex;
+    /* width:1300px; */
+    max-width:100%;
+    /* height:500px; */
+    height:auto;
+    flex-wrap:wrap;
+    justify-content:start;
+    align-items:start;
+    margin-bottom:2rem;
+    transition: opacity 0.5s ease;
+}
+.fade-out {
+    opacity: 0;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+.card-text{
+    padding:4.5rem 3rem;
+    max-width:100%;
+    width:500px;
+}
+section .card h3{
+    color:#fff;
+    font-family:arial;
+    text-transform:uppercase;
+    font-size:1.8rem;
+    margin-bottom:1rem;
+}
+section p{
+    color:#fff;
+    font-family:arial;
+    font-size:1rem;
+    text-align:justify;
+    line-height:1.5rem;
+}
+
+.img-card{
+    object-fit:cover;
+    height:auto;
+    max-width: 100%;
+    width:800px;
+    transition: transform 0.5s ease;
+}
+
+.section-platform{
+    width:100%;
+    height:105vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:start;
+    flex-direction:column;
+    padding:2rem 5rem;
+}
+
+.section-platform h3{
+    color:#fff;
+    font-size:2.6rem;
+    font-family:arial;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:1.3rem;
+}
+
+.section-platform p{
+    color:#fff;
+    font-family:arial;
+    font-size:0.8rem;
+    text-align:justify;
+    text-transform:uppercase;
+    letter-spacing:0.3rem;
+}
+
+.section-plataform-img{
+    width:15rem;
+    margin-bottom:2rem;
+}
+
+.slide-button-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+}
+
+.slide-button{
+    display:flex;
+    gap:2rem;
+}
+
+.slide-button a{
+    font-size:1.8rem;
+    text-decoration:none;
+    color:#fff;
+    font-family:sans-serif;
+}
+
+.left-button{
+    font-size:3rem;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:rgb(35, 24, 54);
+    transition:0.5s;
+}
+
+
+.right-button{
+    font-size:3rem;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:rgb(35, 24, 54);
+    transition:0.5s;
+}
+
+.left-button:hover{
+    transform: scale(1.2);
+    color:#ddd;
+}
+
+
+.right-button:hover{
+    transform: scale(1.2);
+    color:#ddd;
+}
