@@ -25,15 +25,46 @@ const cardData = [
   },
 ];
 
+
 let indexAtual = 0;
 
 function atualizarCardData(index) {
-  document.getElementById("card-image").src = cardData[index].image;
-  document.getElementById("card-title").textContent = cardData[index].title;
-  document.getElementById("card-subtitle").textContent =
-    cardData[index].subtitle;
-  document.getElementById("card-description").textContent =
-    cardData[index].description;
+  const image = document.getElementById("card-image");
+  const title = document.getElementById("card-title");
+  const subtitle = document.getElementById("card-subtitle");
+  const description = document.getElementById("card-description");
+  const slideNumbers = document.querySelectorAll(".slide-number");
+  title.classList.add("rotate-out");
+  subtitle.classList.add("rotate-out");
+  description.classList.add("rotate-out");
+
+  setTimeout(() => {
+    image.src = cardData[index].image;
+    title.textContent = cardData[index].title;
+    subtitle.textContent = cardData[index].subtitle;
+    description.textContent = cardData[index].description;
+
+    title.classList.remove("rotate-out");
+    subtitle.classList.remove("rotate-out");
+    description.classList.remove("rotate-out");
+
+    title.classList.add("rotate-in");
+    subtitle.classList.add("rotate-in");
+    description.classList.add("rotate-in");
+     setTimeout(() => {
+      title.classList.remove("rotate-in");
+      subtitle.classList.remove("rotate-in");
+      description.classList.remove("rotate-in");
+    }, 300);
+  }, 300);
+
+  slideNumbers.forEach((num, i) => {
+    if (i === index) {
+      num.classList.add("active");
+    } else {
+      num.classList.remove("active");
+    }
+  });
 }
 
 function nextData() {

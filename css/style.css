@@ -58,7 +58,7 @@ nav a:hover{
     width:100%;
     height:110vh;
     background-image: url("https://www.convrgencegame.com/static/backgroundFeatures-1a915bcb64865a0ad94ca2b8dda0ad67.jpg");
-    clip-path:polygon(0px 0px, 100% 0px, 100% calc(100% - 11.5vw), 89.2% calc(100% - 9.5vw), 90.5% calc(100% - 16.5vw), 0px calc(100% - 4vw));
+    /* clip-path:polygon(0px 0px, 100% 0px, 100% calc(100% - 11.5vw), 89.2% calc(100% - 9.5vw), 90.5% calc(100% - 16.5vw), 0px calc(100% - 4vw)); */
     background-repeat:no-repeat;
     background-size:cover;
     display:flex;
@@ -87,14 +87,38 @@ section h2{
     justify-content:start;
     align-items:start;
     margin-bottom:2rem;
-    transition: opacity 0.5s ease;
 }
-.fade-out {
-    opacity: 0;
+@keyframes rotateTextUp {
+    0% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: rotateX(60deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
   }
+ .img-card {
+    transition: opacity 0.3s ease-out;
+  }
+  
 
-  .fade-in {
-    opacity: 1;
+  .card-text h3,
+  .card-text p {
+    transform-origin: bottom;
+    animation-timing-function: ease-out;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .rotate-out {
+    animation: rotateTextUp 0.3s forwards;
+  }
+  
+  .rotate-in {
+    animation: rotateTextUp 0.3s reverse forwards;
   }
 .card-text{
     padding:4.5rem 3rem;
@@ -207,3 +231,14 @@ section p{
     transform: scale(1.2);
     color:#ddd;
 }
+
+.slide-number {
+    text-decoration: none;
+    color: gray;
+    transition: color 0.3s ease-out;
+  }
+  
+  .slide-number.active {
+    color:rgb(35, 24, 54);
+    font-weight: bold;
+  }
